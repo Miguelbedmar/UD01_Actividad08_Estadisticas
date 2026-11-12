@@ -1,7 +1,7 @@
 # UD01_Actividad08_Estadisticas
-
+Este proyecto está realizado por Miguel Bedmar Diaz de la Serna alumno segundo de desarrollo de aplicaciones multimedia 
 # 📋 Descripción.
-Este proyecto  se desarrollara una aplicación de consola que primero generara o recibirá cien números , despues se gestionaran la media , moda y desviación tipica  mediante un menu interactivo.
+Se desarrollara una aplicación de consola que primero generara o recibirá cien números , despues se gestionaran la media , moda y desviación tipica  mediante un menu interactivo.
 
 # 🎯Objetivo.
 reforzar el uso de listas, bucles, funciones, operaciones
