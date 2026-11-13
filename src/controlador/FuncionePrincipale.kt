@@ -1,9 +1,12 @@
 package controlador
+
 import java.util.Scanner
 import java.util.Locale
-val sc=  Scanner(System.`in`).useLocale(Locale.US)
-val ROJO="\u001B[31m" // Creamos una variable con el nombre del color  para perzonalizar los mensajes de errores
+
+val sc = Scanner(System.`in`).useLocale(Locale.US)
+val ROJO = "\u001B[31m" // Creamos una variable con el nombre del color  para perzonalizar los mensajes de errores
 val RESET = "\u001B[0m"
+
 class FuncionePrincipale {
 
 
@@ -22,29 +25,33 @@ class FuncionePrincipale {
 
     fun menuPrincipal() {
         var salir = false
-        val ancho = 40 // Ancho predeterminado para rellenar con <==>
+        val ancho = 48 // Ancho predeterminado para rellenar con <==>
         do {
             try {
                 println("ESTADÍSTICAS CON KOTLIN".formateoMenuPrincipalContacto(ancho))
-                println("0. Generar 100 números aleatorios".formateoMenuPrincipalContacto(ancho))
-                println("1. Introducir 100 números manualmente".formateoMenuPrincipalContacto(ancho))
-                println("2. Mostrar números".formateoMenuPrincipalContacto(ancho))
-                println("3. Calcular media".formateoMenuPrincipalContacto(ancho))
-                println("4. Calcular moda".formateoMenuPrincipalContacto(ancho))
-                println("5. Calcular desviación típica".formateoMenuPrincipalContacto(ancho))
-                println("6.Calcular todas las estadísticas".formateoMenuPrincipalContacto(ancho))
+                println("0. Salir".formateoMenuPrincipalContacto(ancho))
+                println("1. Generar 100 números aleatorios".formateoMenuPrincipalContacto(ancho))
+                println("2. Introducir 100 números manualmente".formateoMenuPrincipalContacto(ancho))
+                println("3. Mostrar números".formateoMenuPrincipalContacto(ancho))
+                println("4. Calcular media".formateoMenuPrincipalContacto(ancho))
+                println("5. Calcular moda".formateoMenuPrincipalContacto(ancho))
+                println("6. Calcular desviación típica".formateoMenuPrincipalContacto(ancho))
+                println("7.Calcular todas las estadísticas".formateoMenuPrincipalContacto(ancho))
                 println("Seleccione una opción".formateoMenuPrincipalContacto(ancho))
                 if (!sc.hasNextInt()) {
                     sc.next()
-                    println("Error: La opción seleccionada no está disponible")
+                    println("${ROJO}Error: La opción seleccionada no está disponible$RESET")
                     continue
                 }
                 val opcion = sc.nextInt()
                 when (opcion) {
-                    1 -> println("")
-                    2 -> println("")
+                    1 -> GeneradorNumero().numeroGenerado()
+                    2 -> GeneradorNumero().numeroIngresado()
                     3 -> println("")
                     4 -> println("")
+
+                    5 -> println("")
+                    6 -> println("")
 
                     0 -> {
                         salir = true
