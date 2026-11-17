@@ -16,7 +16,7 @@ class GeneradorNumero {
        Numero = MutableList(100){(1..100).random()}
 
         for (num in Numero){
-            print("Contenido de la lista generada es :${Numero} ")
+            print("Contenido de la lista generada es :${Numero}\n ")
         }
 
     }
