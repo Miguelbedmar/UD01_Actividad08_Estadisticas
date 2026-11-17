@@ -12,14 +12,14 @@ class GeneradorNumero {
     val sc = Scanner(System.`in`).useLocale(Locale.US)
 
 
-    fun numeroGenerado() {
+    fun numeroGenerado(): MutableList<Int> {
         numero = MutableList(100){(1..100).random()}
 
-            print("Contenido de la lista generada es :${numero}\n ")
-
+        print("Contenido de la lista generada es :${numero}\n ")
+         return numero
     }
 
-    fun numeroIngresado() { //Funcion que recoge  el ingreso de cien numeros
+    fun numeroIngresado():MutableList<Int> { //Funcion que recoge  el ingreso de cien numeros
 
         while (numero.size <= 100) {
             try {
@@ -32,6 +32,7 @@ class GeneradorNumero {
                 }else{
                     println("${ROJO} ERROR! el numero no es valido$RESET ")
                 }
+
             } catch (NumberFormatException: NumberFormatException) {
                 println("${ROJO} ERROR! el numero no es válido!$RESET")
                 continue
@@ -41,8 +42,7 @@ class GeneradorNumero {
             }
 
         }
+        return numero
 
     }
-
-
 }

@@ -7,7 +7,7 @@ val sc = Scanner(System.`in`).useLocale(Locale.US)
 val ROJO = "\u001B[31m" // Creamos una variable con el nombre del color  para perzonalizar los mensajes de errores
 val RESET = "\u001B[0m"
 
-private var numero = mutableListOf<Double>()
+private var numero:MutableList<Int> = mutableListOf()
 class FuncionePrincipale {
 
 
@@ -47,8 +47,8 @@ class FuncionePrincipale {
                 }
                 val opcion = sc.nextInt()
                 when (opcion) {
-                    1 -> GeneradorNumero().numeroGenerado() // Numero generado
-                    2 -> GeneradorNumero().numeroIngresado() // Cien numeros ingresados por el usuario.
+                    1 ->numero= GeneradorNumero().numeroGenerado() // Numero generado
+                    2 ->numero= GeneradorNumero().numeroIngresado() // Cien numeros ingresados por el usuario.
                     3 -> println("")
                     4 -> println("")
 
