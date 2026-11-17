@@ -30,7 +30,7 @@ class GeneradorNumero {
                 if(numeroIngresado !=null) {
                     Numero.add(numeroIngresado)
                 }else{
-                    println("${ROJO} ERROR! el numero no es valido ")
+                    println("${ROJO} ERROR! el numero no es valido$RESET ")
                 }
             } catch (NumberFormatException: NumberFormatException) {
                 println("${ROJO} ERROR! el numero no es válido!$RESET")
