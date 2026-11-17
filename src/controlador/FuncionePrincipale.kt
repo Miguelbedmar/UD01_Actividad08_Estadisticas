@@ -26,6 +26,7 @@ class FuncionePrincipale {
     fun menuPrincipal() {
         var salir = false
         val ancho = 48 // Ancho predeterminado para rellenar con <==>
+
         do {
             try {
                 println("ESTADÍSTICAS CON KOTLIN".formateoMenuPrincipalContacto(ancho))
@@ -45,8 +46,8 @@ class FuncionePrincipale {
                 }
                 val opcion = sc.nextInt()
                 when (opcion) {
-                    1 -> GeneradorNumero().numeroGenerado()
-                    2 -> GeneradorNumero().numeroIngresado()
+                    1 ->  GeneradorNumero().numeroGenerado() // Numero generado
+                    2 -> GeneradorNumero().numeroIngresado() // Cien numeros ingresados por el usuario.
                     3 -> println("")
                     4 -> println("")
 

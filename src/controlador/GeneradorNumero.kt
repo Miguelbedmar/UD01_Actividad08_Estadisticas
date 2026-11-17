@@ -8,28 +8,30 @@ class GeneradorNumero {
     val ROJO = "\u001B[31m" // Creamos una variable con el nombre del color  para perzonalizar los mensajes de errores
     val RESET = "\u001B[0m"
 
-    private val generadorNumero = (1..100).random()
+    private var Numero = mutableListOf<Int>()
     val sc = Scanner(System.`in`).useLocale(Locale.US)
 
+
     fun numeroGenerado() {
+       Numero = MutableList(100){(1..100).random()}
 
+        for (num in Numero){
+            print("Contenido de la lista generada es :${Numero} ")
+        }
 
-        println(generadorNumero)
     }
 
     fun numeroIngresado() { //Funcion que recoge  el ingreso de cien numeros
-        var numero = 0
 
-        while (numero < 100) {
+        while (Numero.size < 100) {
             try {
              println("Ingrese cien numeros ")
-             if(!sc.hasNextInt()) {
-                 sc.next()
-                 continue
-             }
-              numero=sc.nextInt()
-              sc.nextLine()
-
+               val numeroIngresado = sc.nextLine().toIntOrNull()
+                if(numeroIngresado !=null) {
+                    Numero.add(numeroIngresado)
+                }else{
+                    println("${ROJO} ERROR! el numero no es valido ")
+                }
             } catch (NumberFormatException: NumberFormatException) {
                 println("${ROJO} ERROR! el numero no es válido!$RESET")
                 continue
