@@ -1,0 +1,6 @@
+package modelo
+
+interface FuncionesCalculo {
+
+    
+}

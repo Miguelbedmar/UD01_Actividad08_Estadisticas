@@ -7,28 +7,28 @@ import java.util.Scanner
 class GeneradorNumero {
     val ROJO = "\u001B[31m" // Creamos una variable con el nombre del color  para perzonalizar los mensajes de errores
     val RESET = "\u001B[0m"
-
-    private var Numero = mutableListOf<Int>()
+    private var  contador =0
+    private var numero = mutableListOf<Int>()
     val sc = Scanner(System.`in`).useLocale(Locale.US)
 
 
     fun numeroGenerado() {
-       Numero = MutableList(100){(1..100).random()}
+        numero = MutableList(100){(1..100).random()}
 
-        for (num in Numero){
-            print("Contenido de la lista generada es :${Numero}\n ")
-        }
+            print("Contenido de la lista generada es :${numero}\n ")
 
     }
 
     fun numeroIngresado() { //Funcion que recoge  el ingreso de cien numeros
 
-        while (Numero.size < 100) {
+        while (numero.size <= 100) {
             try {
-             println("Ingrese cien numeros ")
+                println("Ingrese cien numeros ")
                val numeroIngresado = sc.nextLine().toIntOrNull()
                 if(numeroIngresado !=null) {
-                    Numero.add(numeroIngresado)
+                    print("Numeros ingresados${contador}/100 \n ")
+                    numero.add(numeroIngresado)
+                    contador++
                 }else{
                     println("${ROJO} ERROR! el numero no es valido$RESET ")
                 }
