@@ -49,12 +49,11 @@ class FuncionePrincipale {
                 when (opcion) {
                     1 ->numero= GeneradorNumero().numeroGenerado() // Numero generado
                     2 ->numero= GeneradorNumero().numeroIngresado() // Cien numeros ingresados por el usuario.
-                    3 -> println("")
-                    4 -> println("")
-
-                    5 -> println("")
-                    6 -> println("")
-
+                    3 ->println("")
+                    4 -> FuncioneCalculo().calcularMedia(numero)
+                    5 -> FuncioneCalculo().calcularModa(numero)
+                    6 -> FuncioneCalculo().calcularDesviacionTipica(numero)
+                    7 -> FuncioneCalculo().mostrarNumeros(numero)
                     0 -> {
                         salir = true
                         println("Hasta luego")

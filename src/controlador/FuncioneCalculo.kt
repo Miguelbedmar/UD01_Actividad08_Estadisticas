@@ -3,8 +3,6 @@ import modelo.FuncionesCalculo
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-private  val colorRojo= ROJO
-private  val resetColor=RESET
 
  class FuncioneCalculo(): FuncionesCalculo {
 
@@ -41,7 +39,11 @@ private  val resetColor=RESET
      }
 
      override fun mostrarNumeros(numeros: List<Int>) {
-         TODO("Not yet implemented")
+       println(" <=======Todas las estadisticas=====>")
+       println("MEDIA: ${calcularMedia(numeros)} ")
+       println("MODA: ${calcularModa(numeros)}")
+       println("DESVIACIÓN TIPICA : ${calcularDesviacionTipica(numeros)}")
+       println("<===================================>")
      }
 
 

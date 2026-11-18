@@ -45,4 +45,11 @@ class GeneradorNumero {
         return numero
 
     }
+
+
+    fun mostrarListaNumero (numeros: List<Int>){
+
+        return  println("El contenido de la lista actual: ${numeros}")
+    }
+
 }
