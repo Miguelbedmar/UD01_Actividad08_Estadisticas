@@ -5,7 +5,7 @@ import kotlin.math.sqrt
 
 
  class FuncioneCalculo(): FuncionesCalculo {
-
+     val formateoDecimales = 25.toFloat()/7
 
 
      override fun calcularMedia(numeros: List<Int>): Double {
@@ -13,6 +13,7 @@ import kotlin.math.sqrt
             return 0.0
         }
          return numeros.average()
+
      }
 
      override fun calcularModa(numeros: List<Int>): List<Int> {
@@ -39,10 +40,11 @@ import kotlin.math.sqrt
      }
 
      override fun mostrarNumeros(numeros: List<Int>) {
+
        println(" <=======Todas las estadisticas=====>")
-       println("MEDIA: ${calcularMedia(numeros)} ")
-       println("MODA: ${calcularModa(numeros)}")
-       println("DESVIACIÓN TIPICA : ${calcularDesviacionTipica(numeros)}")
+       println("MEDIA: %.2fn "+ calcularMedia(numeros))
+       println("MODA:  %.2fn "+ calcularModa(numeros))
+       println("DESVIACIÓN TIPICA %.2fn  : "+ calcularDesviacionTipica(numeros))
        println("<===================================>")
      }
 

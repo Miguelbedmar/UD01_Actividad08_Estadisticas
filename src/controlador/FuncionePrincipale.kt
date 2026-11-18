@@ -49,10 +49,10 @@ class FuncionePrincipale {
                 when (opcion) {
                     1 ->numero= GeneradorNumero().numeroGenerado() // Numero generado
                     2 ->numero= GeneradorNumero().numeroIngresado() // Cien numeros ingresados por el usuario.
-                    3 ->println("")
-                    4 -> FuncioneCalculo().calcularMedia(numero)
-                    5 -> FuncioneCalculo().calcularModa(numero)
-                    6 -> FuncioneCalculo().calcularDesviacionTipica(numero)
+                    3 -> GeneradorNumero().mostrarListaNumero( numero)
+                    4 ->print("La Media es : %.2fn" +FuncioneCalculo().calcularMedia(numero) )
+                    5 ->print("El resultado de la Moda es : %.2fn "+ FuncioneCalculo().calcularModa(numero) )
+                    6 -> print("La Desviación tipica es : %.2fn"+ FuncioneCalculo().calcularDesviacionTipica(numero) )
                     7 -> FuncioneCalculo().mostrarNumeros(numero)
                     0 -> {
                         salir = true
