@@ -7,7 +7,7 @@ import kotlin.math.sqrt
  class FuncioneCalculo(): FuncionesCalculo {
 
 
-
+        //Calculo de la media con el metodo average()
      override fun calcularMedia(numeros: List<Int>): Double {
         if(numeros.isEmpty()){ // Comprobamos  si la lista esta vacia
             return 0.0
@@ -16,6 +16,7 @@ import kotlin.math.sqrt
 
      }
 
+     //Calculo  de la moda con groupingBy ,eachCount.
      override fun calcularModa(numeros: List<Int>): List<Int> {
         if(numeros.isEmpty()){
             return emptyList()
@@ -28,6 +29,7 @@ import kotlin.math.sqrt
          return numeroAgrupado.filterValues { it== limiteAgrupados }.keys.toList() // Obtenemos los valires del map
      }
 
+     //Calculo de la desviaciónTipica.
      override fun calcularDesviacionTipica(numeros: List<Int>): Double {
         if(numeros.isEmpty()){
             return 0.0
@@ -40,7 +42,7 @@ import kotlin.math.sqrt
      }
 
      override fun mostrarNumeros(numeros: List<Int>) {
-
+        
        println(" <=======Todas las estadisticas=====>")
        println("MEDIA: %.2f ".format(calcularMedia( numeros)))
        println("MODA:   "+calcularModa(numeros))
