@@ -50,8 +50,8 @@ class FuncionePrincipale {
                     1 ->numero= GeneradorNumero().numeroGenerado() // Numero generado
                     2 ->numero= GeneradorNumero().numeroIngresado() // Cien numeros ingresados por el usuario.
                     3 -> GeneradorNumero().mostrarListaNumero( numero)
-                    4 -> print("La Media es :%.2f".format(FuncioneCalculo().calcularMedia(numero))+"\n")
-                    5 ->print("El resultado de la Moda es :  "+ FuncioneCalculo().calcularModa(numero)+"\n")
+                    4 -> print("La Media es :%.2f".format(FuncioneCalculo().calcularMedia(numero))+"\n") // Formateo los decimales para que unicamente se muestren dos
+                    5 ->print("El resultado de la Moda es :  "+ FuncioneCalculo().calcularModa(numero)+"\n") // No formateamos la moda ya que como solo estamos buscando y contando desde el arraylist si intentamos formatearlo no s saltaria un error de
                     6 -> print("La Desviación tipica es : %.2f".format(FuncioneCalculo().calcularDesviacionTipica(numero))+"\n" )
                     7 -> FuncioneCalculo().mostrarNumeros(numero)
                     0 -> {

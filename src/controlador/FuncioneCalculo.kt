@@ -7,11 +7,12 @@ import kotlin.math.sqrt
  class FuncioneCalculo(): FuncionesCalculo {
 
 
+
      override fun calcularMedia(numeros: List<Int>): Double {
-        if(numeros.isEmpty()){
+        if(numeros.isEmpty()){ // Comprobamos  si la lista esta vacia
             return 0.0
         }
-         return numeros.average()
+         return numeros.average() //Calculamos la media
 
      }
 
@@ -19,12 +20,12 @@ import kotlin.math.sqrt
         if(numeros.isEmpty()){
             return emptyList()
         }
-         val numeroAgrupado = numeros.groupingBy { it }.eachCount()
+         val numeroAgrupado = numeros.groupingBy { it }.eachCount() // Agrupamos  los numeros de la lista  y  contamos   por repetividad
          val limiteAgrupados= numeroAgrupado.values.maxOrNull()?:0
 
          if(limiteAgrupados   <= 1) return emptyList()
 
-         return numeroAgrupado.filterValues { it== limiteAgrupados }.keys.toList()
+         return numeroAgrupado.filterValues { it== limiteAgrupados }.keys.toList() // Obtenemos los valires del map
      }
 
      override fun calcularDesviacionTipica(numeros: List<Int>): Double {
@@ -33,9 +34,9 @@ import kotlin.math.sqrt
         }
 
          val media = calcularMedia(numeros)
-         val varianza = numeros.map{(it-media).pow(2) }.average()
+         val varianza = numeros.map{(it-media).pow(2) }.average() // Calculamos la desviacion tipica
 
-         return sqrt(varianza)
+         return sqrt(varianza) // realizamos la raiz cuadrada
      }
 
      override fun mostrarNumeros(numeros: List<Int>) {
